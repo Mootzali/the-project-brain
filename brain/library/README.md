@@ -27,7 +27,7 @@ brain/library/
 ```
 
 - Truth rewrites freely, timeline appends only. No fact without source.
-- Cross-refs use wiki-links like `[[alice-example]]` (id = frontmatter `id` or filename). Run `scripts/lint-links.sh`.
+- Cross-refs use wiki-link slugs, where the slug is the target's frontmatter `id` or filename (e.g. link to a page with `id: acme-example`). Run `scripts/lint-links.sh`. Shape examples live in `examples/`, not here.
 - Hot (STATUS/HANDOFF/people-active) vs cold (archive). Librarian promotes/demotes weekly.
 
 ## Inbox discipline

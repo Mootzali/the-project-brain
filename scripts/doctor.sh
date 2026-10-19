@@ -14,7 +14,7 @@ chk "brain/HANDOFF.md exists" "[ -f $ROOT/brain/HANDOFF.md ]"
 chk "topics dirs exist" "[ -d $ROOT/brain/topics/systems ] && [ -d $ROOT/brain/topics/operations ] && [ -d $ROOT/brain/topics/planning ] && [ -d $ROOT/brain/topics/feedback ]"
 chk "library dirs exist" "[ -d $ROOT/brain/library/inbox ] && [ -d $ROOT/brain/library/people ] && [ -d $ROOT/brain/library/companies ] && [ -d $ROOT/brain/library/ideas ]"
 chk "commands exist" "[ -f $ROOT/.claude/commands/start.md ] && [ -f $ROOT/.claude/commands/update.md ] && [ -f $ROOT/.claude/commands/think.md ] && [ -f $ROOT/.claude/commands/librarian.md ] && [ -f $ROOT/.claude/commands/import.md ]"
-chk "scripts executable" "[ -x $ROOT/scripts/doctor.sh ] && [ -x $ROOT/scripts/lint-links.sh ] && [ -x $ROOT/scripts/import-notes.sh ] && [ -x $ROOT/scripts/resolver-eval.sh ]"
+chk "scripts executable" "[ -x $ROOT/scripts/doctor.sh ] && [ -x $ROOT/scripts/lint-links.sh ] && [ -x $ROOT/scripts/import-notes.sh ] && [ -x $ROOT/scripts/resolver-eval.sh ] && [ -x $ROOT/scripts/new-business.sh ]"
 chk "git repo" "[ -d $ROOT/.git ]"
 
 if [ -f "$ROOT/brain/STATUS.md" ]; then

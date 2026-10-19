@@ -18,7 +18,7 @@ while IFS= read -r -d '' f; do
   while IFS= read -r link; do
     # link like [[people/name]] -> check last segment
     slug=$(echo "$link" | sed -E 's/.*\[\[([^]]+)\]\].*/\1/' | awk -F/ '{print $NF}' | tr -d '[:space:]')
-    if [ -z "${slugs[$slug]:-}" ]; then echo "FAIL dangling [[$link]] in $f"; fail=1; fi
+    if [ -z "${slugs[$slug]:-}" ]; then echo "FAIL dangling link to '$slug' in $f"; fail=1; fi
   done < <(grep -o "\[\[[^]]*\]\]" "$f" 2>/dev/null || true)
 done < <(find "$ROOT/brain" -type f -name "*.md" -print0)
 [ $fail -eq 0 ] && echo "ok links resolve"
